@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    
 }
 
 h1 {
@@ -8,22 +9,35 @@ h1 {
     background-color: white;
     text-align: center;
 }
-h2{
-    color: bisque;
+aside{
+    color: black;
     border: 2px solid grey;
+    background-color:  grey;
+    font-size: 20px;
     text-align: center;
+    border-radius: 20px;
+    background-color: skyblue
 }
 
-p{
+h2{
     text-align: center;
-    border: 10px solid white;
-    color: whitesmoke;
+    color: black;
+    float: right
 }
 
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     width : 30%;
     border: 5px solid red;
+}
+article{
+    border-radius: 100px;
+    background-color: beige;
+}
+span{
+    border-radius:10px;
+    background-color:skyblue;
+    float: right;
+    font-size: 20px
 }
