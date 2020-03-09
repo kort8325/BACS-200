@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+    
+}
+
+h1 {
+    color: orangered;
+    border: 1px solid gray;
+    background-color: white;
+    text-align: center;
+}
+aside{
+    color: black;
+    border: 2px solid grey;
+    background-color:  grey;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: skyblue
+}
+
+h2{
+    text-align: center;
+    color: black;
+    float: right
+}
+
+img {
+    display: block;
+    margin: auto;
+    width : 30%;
+    border: 5px solid red;
+}
+article{
+    border-radius: 100px;
+    background-color: beige;
+}
+span{
+    border-radius:10px;
+    background-color:skyblue;
+    float: right;
+    font-size: 20px
+}
