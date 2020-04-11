@@ -1,6 +1,6 @@
 <link href="../unc.css" rel="stylesheet">
 <div class="sidenav">
-    <a href="index.html">Home Page</a>
+    <a href="index.html">Home Page</a><br>
     <a href="SinglyLinkedLists/index.html">Singly Linked Lists</a><br>
     <a href="DoublyLinkedLists/index.html">Doubly Linked Lists</a><br>
     <a href="Queues/index.html">Queues</a><br>
@@ -17,9 +17,70 @@
     </h1><br>
     <h2>Python, the simple language
     </h2>
-    <p>     Work on python began in the late 1980's by Guido van Rossum, who had worked on google for a time.It became the main coding language used by the Netherlandsd, succeeding the ABC language and was notable because of it's ability of exception handling and interfacing, which would become a standard  for languages in the future.  <br>
-        Today, Python 3.7 is the language that various software development developers default to, because of the simple coding of complex functions and methods.  
+    <p>     Work on python began in the late 1980's by Guido van Rossum, who had worked on google for a time.It became the main coding language used by the Netherlandsd, succeeding the ABC language and was notable because of it's ability of exception handling and interfacing, which would become a standard  for languages in the future.  Today, Python 3.7 is the language that various software development developers default to, because of the simple coding of complex functions and methods.  
     </p>
-    
+    <p>One of the huge reasons, python is used as often as it is, is the way python 3.7 implements various lists to give the best running time possible. Running time means the amount of time needed for a function to be completed, and with huge lists or databases of values, having a quicker running time is always better for programmers.  A good way to measure running time is through big O notation, in O(n). below is a graph of big O running of a function, vs how long the list is, and the graph shows how long functions can take when a list has many elements.
+    </p>
+<h2 id="chartTitle">Big-O Complexity Chart</h2>  
+        <!-- for webpage scrapers
+        <img id="chart" src="img/big-o-complexity-chart.png" />
+        -->
 
-</div>
+        <div>
+          <table id="legend" class="table">
+            <tbody>
+              <tr>
+                <td><code class="red">            Horrible</code></td>
+                <td><code class="orange">Bad</code></td>
+                <td><code class="yellow">Fair</code></td>
+                <td><code class="yellow-green">Good</code></td>
+                <td><code class="green">Excellent</code></td>
+              </tr>
+            </tbody>
+          </table> 
+        </div>
+       
+        <div>
+          <svg id="chart" width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+            <!-- horrible region -->
+            <path d="M50 450 L 50 0 L 900 0 L 900 450 Z" fill="#ff8989"/>
+            <!-- bad region -->
+            <path d="M50 450 L 900 0 L 900 450 Z" fill="#FFC543"/>
+            <!-- fair region -->
+            <path d="M50 450 L 900 450 L 900 330 Z" fill="yellow"/>
+            <!-- good region -->
+            <path d="M50 450 L 900 450 L 900 410 Z" fill="#C8EA00"/>
+            <!-- excellent region -->
+            <path d="M50 450 L 900 450 L 900 440 Z" fill="#53d000"/>
+
+            <!-- axes -->
+            <path d="M50 0 L 50 450 L 900 450" fill="transparent" stroke="black" stroke-width="2"/>
+
+            <path d="M50 448 L 900 448" fill="transparent" stroke="black" stroke-width="2"/>
+            <text x="700" y="438" fill="black">O(log n), O(1)</text>
+
+            <path d="M50 450 L 900 400" fill="transparent" stroke="black" stroke-width="2"/>
+            <text x="760" y="390" fill="black">O(n)</text>
+
+            <path d="M50 450 Q 400 350, 900 150" fill="transparent" stroke="black" stroke-width="2"/>
+            <text x="630" y="190" fill="black">O(n log n)</text>
+
+            <path d="M50 450 Q 180 380, 250 0" fill="transparent" stroke="black" stroke-width="2"/>
+            <text x="260" y="30" fill="black">O(n^2)</text>
+
+            <path d="M50 450 C 100 430, 120 350, 120 0" fill="transparent" stroke="black" stroke-width="2"/>
+            <text x="125" y="20" fill="black">O(2^n)</text>
+
+            <path d="M50 450 C 80 450, 80 350, 80 0" fill="transparent" stroke="black" stroke-width="2"/>
+            <text x="80" y="20" fill="black">O(n!)</text>
+
+            <text x="0" y="0" transform="translate(30 230) rotate(-90)" style="dominant-baseline: middle; text-anchor: middle; font-size:20px; color: #555; font-size:20px; color: #555; font-style: italic;" fill="black">Operations</text>
+            <text x="0" y="0" transform="translate(420 470)" style="dominant-baseline: middle; text-anchor: middle; font-size:20px; color: #555; font-style: italic;" fill="black">Elements</text>
+          </svg>
+        </div>
+    <br>
+    <p>The big O running times and complexity vary by types of lists.  Check out the tutorials for python list types on the side menu to learn more. 
+    </p>
+    </div>
+    <!--table used from https://www.bigocheatsheet.com/-->
+

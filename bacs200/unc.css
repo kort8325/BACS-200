@@ -3,7 +3,7 @@ background-color: #c0c0c0;
 }
 body,td,th {
 font-family: Verdana, Arial, Helvetica, sans-serif;
-font-size: 12px;
+font-size:  20px
 color: #666678;
 }
 ul {
@@ -144,3 +144,31 @@ h1 {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+.green {
+  border: 1px solid #286500;
+  color: black;
+  background-color: #53d000;
+}
+
+.yellow-green {
+  border: 1px solid #286500;
+  color: black;
+  background-color: #C8EA00;
+}
+
+.yellow {
+  border: 1px solid #6f6e00;
+  color: black;
+  background-color: yellow;
+}
+
+.orange {
+  border: 1px solid #b20000;
+  color: black;
+  background-color: #FFC543;
+}
+
+.red {
+  border: 1px solid #b20000;
+  color: black;
+  background-color: #ff8989;
