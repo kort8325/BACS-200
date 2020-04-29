@@ -44,11 +44,11 @@ class HashList:
         return string
 
 
-""" # test Hash List 
+# test Hash List 
 hashlist = HashList(5)
 hashlist.put(6)
 hashlist.put(8)
 hashlist.put(14)
 print(hashlist.contains(6))
 hashlist.print()
-print(hashlist.items()) """
+print(hashlist.items())

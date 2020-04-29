@@ -18,17 +18,6 @@ class DLinkedList:
             self.head.prev = new_node 
         self.head = new_node
 
-    def index(self, searchKey):
-        current = self.head
-        counter = 0
-        # loop till current not equal to None 
-        while current != None:
-            if current.data == searchKey: 
-                return counter # data found
-            counter += 1
-            current = current.next
-        return -1
-
     def search(self, searchKey): 
         current = self.head 
         # loop till current not equal to None 
@@ -104,7 +93,7 @@ class DLinkedList:
         self.deleteNode(last)
         return temp
 
-"""     Testing the functions above
+#Testing the functions above
 llist = DLinkedList()
 
 e1 = Node("mon")
@@ -121,8 +110,8 @@ llist.insert(llist.head.next,e3)
 llist.add(e5)
 
 llist.insert(llist.head.next.next,e6)
-print(llist.pop(e6), " should be deleted")
+#print(llist.pop(), " should be deleted")
 
-llist.Listprint() """
+llist.Listprint() 
 
 

@@ -50,7 +50,7 @@ class Deque:
             counter = counter + 1
         return counter
 
-"""  Tests the above functions
+#Tests the above functions
 deque = Deque()
 print(deque.isEmpty())
 deque.addFront('c')
@@ -61,8 +61,7 @@ print(deque.size())
 print(deque.removeFront())
 print(deque.removeRear())
 print(deque.isEmpty())
-print(deque.stack)"""
-
+print(deque.stack)
 
 
 

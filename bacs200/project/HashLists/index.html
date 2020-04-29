@@ -8,7 +8,7 @@
     <a href="../HashLists/index.html">Hash Lists</a><br>
 <br></div>
 <div class="main">
-<link href="../../unc.css" rel="stylesheet">
+<link href="../unc.css" rel="stylesheet">
 <h1>Python Run Times
 
 <p>Yusuf Kortobi<br>
@@ -17,6 +17,89 @@
 </h1>
 <br>
 
-    <p>This page will show off the code found in this file.  Check it out if you want to see work on Hash Lists</p>
-    <a href="../code/HashList.py">HashList.py</a>
+    <p>Below is code demonstrating python code of doubly linked lists being executed. The 'tricks' for this week are included in making the python code below</p>
+        <a href="../code/HashList.py">HashList.py</a>
+    <div class= "code-container">
+<div id="highlighter_780875" class="syntaxhighlighter nogutter  ">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+    <div class="line number1 index0 alt1"><code class="keyword">class</code> <code class="plain">HashList: </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">__init__</code>(</code><code class="color1">self, length</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.hlist = [<code class="keyword">None</code>] * length </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.len = length </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">print</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="functions">print</code>(self.hlist) </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">hashfunction</code>(</code><code class="color1">self, item</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return </code>item % self.len </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">rehashfunction</code>(</code><code class="color1">self, oldpos</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return </code>(oldpos + 1) % self.len </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">contains</code>(</code><code class="color1">self, item</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">for </code>i <code class="keyword">in</code> self.hlist:</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if </code>(i==item): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return </code>True </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return </code>False </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">put</code>(</code><code class="color1">self, item</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">hashvalue = self.hashfunction(item) </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code>(self.hlist[hashvalue] == <code class="keyword">None</code>): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.hlist[hashvalue] = item </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">elif</code>(self.hlist[hashvalue] != <code class="keyword">None</code>): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return </code>(self.put2(hashvalue+1,item,hashvalue,0) </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">put2</code>(</code><code class="color1">self, hashvalue, item, origin, counter</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code>(self.hlist[hashvalue] == <code class="keyword">None</code>): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.hlist[hashvalue] = item </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">elif</code>(self.hlist[hashvalue] != <code class="keyword">None</code>): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code> hashvalue==origin:</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="functions"><code class="keyword">return </code>print</code>(<code class="comments">"error"</code>) </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code> hashvalue == self.len-1:</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return </code>(self.put2(0,item,origin,counter)) </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">else</code>:</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return </code>(self.put2(hashvalue + 1,item,origin,counter)) </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">items</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">string = <code class="comments">""</code> </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">for </code>i <code class="keyword">in</code> self.hlist:</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if </code>i != <code class="keyword">None</code>: </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">string += <code class="functions">str</code>(i) + <code class="comments">", "</code> </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return </code>string </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    
+    <div class="line number5 index4 alt2"><code class="comments"># test Hash List functions </code></div>
+    <div class="line number5 index4 alt2"><code class="plain">hashlist = HashList(5) </code></div>
+    <div class="line number5 index4 alt2"><code class="plain">hashlist.<code class="methods">put</code>(6) </code></div>
+    <div class="line number5 index4 alt2"><code class="plain">hashlist.<code class="methods">put</code>(8) </code></div>
+    <div class="line number5 index4 alt2"><code class="plain">hashlist.<code class="methods">put</code>(14) </code></div>
+    <div class="line number5 index4 alt2"><code class="plain"><code class="functions">print</code>(hashlist.<code class="methods">contains</code>(6)</code></div>
+    <div class="line number5 index4 alt2"><code class="plain">hashlist.<code class="functions">print</code>()</code></div>
+    <div class="line number5 index4 alt2"><code class="plain"><code class="functions">print</code>(hashlist.<code class="methods">items</code>())</code></div>
+    
+</div></td></tr></tbody></table></div></div>
+<br><p>Output:</p>
+    <div class= "code-container">
+<div id="highlighter_780875" class="syntaxhighlighter nogutter  ">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+    <div class="line number1 index0 alt2"> <code class="plain">True</code></div>
+    <div class="line number1 index0 alt2"> <code class="plain">[None, 6, None, 8, 14]</code></div>
+    <div class="line number1 index0 alt2"> <code class="plain">6, 8, 14</code></div>
+</div></td></tr></tbody></table></div></div>
 </div>

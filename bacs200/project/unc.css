@@ -106,6 +106,7 @@ h1 {
     text-align: center;
     box-shadow: 2px 2px 5px gray;
 }
+
 /* The sidebar menu */
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -171,4 +172,16 @@ h1 {
 .red {
   border: 1px solid #b20000;
   color: black;
-  background-color: #ff8989;
+    background-color: #ff8989;}
+
+.code-container {
+    flex:1;
+    min-width:0;
+    overflow-y:hidden;
+    width:35%;
+    background-color: white;}
+
+.comments {color: green;}
+.keyword{color:#006699!important;font-weight:bold!important;}
+.functions{color:#ff1493!important}
+.methods {color: orange;}

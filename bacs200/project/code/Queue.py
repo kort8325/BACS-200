@@ -32,7 +32,7 @@ class Queue:
             counter = counter + 1
         return counter
 
-""" Tests the above functions
+#Tests the above functions
 myQueue = Queue()
 print(myQueue.isEmpty())
 myQueue.enqueue('a')
@@ -42,4 +42,4 @@ myQueue.enqueue('d')
 print(myQueue.isEmpty())
 print(myQueue.dequeue())
 print(myQueue.queue)
-print(myQueue.size())"""
+print(myQueue.size())

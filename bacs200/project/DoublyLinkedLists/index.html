@@ -8,7 +8,7 @@
     <a href="../HashLists/index.html">Hash Lists</a><br>
 <br></div>
 <div class="main">
-<link href="../../unc.css" rel="stylesheet">
+<link href="../unc.css" rel="stylesheet">
 <h1>Python Run Times
 
 <p>Yusuf Kortobi<br>
@@ -16,7 +16,147 @@
    Bacs-495</p>
 </h1>
 <br>
-
-    <p>This page will show off the code found in this file.  Check it out if you want to see work on Doubly Linked Lists</p>
+    <p>Below is code demonstrating python code of doubly linked lists being executed. The 'tricks' for this week are included in making the python code below</p>
     <a href="../code/DoublyLinkedLists.py">DoublyLinkedList.py</a>
+    <div class= "code-container">
+<div id="highlighter_780875" class="syntaxhighlighter nogutter  ">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+    <div class="line number1 index0 alt1"><code class="keyword">class</code> <code class="plain">Node: </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">__init__</code>(</code><code class="color1">self, data=None</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.data = data </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.next = None </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.last = None </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">__str__</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="methods">return</code>(self.data) </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number1 index0 alt1"><code class="keyword">class</code> <code class="plain">DLinkedList: </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">__init__</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.head = None </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">add</code>(</code><code class="color1">self, newdata</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">new_node=Node(newdata) </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">newNode.next = self.head </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code> self.head<code class="keyword"> is not None:</code> </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.head.last=new_node </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.head = new_node </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">search</code>(</code><code class="color1">self, searchKey</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">current = self.head</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">while</code> current !=<code class="keyword">None:</code> </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code> current.data == searchKey:</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return True</code> </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">current = self.head</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return False</code> </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">isEmptey</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code>(self.head<code class="keyword"> is None</code>): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return True</code> </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return False</code> </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">size</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">counter = 0</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">current = self.head</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">while</code> (current !=<code class="keyword">None</code>):</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">counter = counter + 1</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">current = current.next</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return</code>(counter) </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">deleteNode</code>(</code><code class="color1">self, dele</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code> self.head <code class="keyword">is None or</code> dele <code class="keyword">is None</code>: </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return</code> -1</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code> dele.next <code class="keyword">is not None</code>:</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">dele.next.last = dele.last</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code> dele.last <code class="keyword">is not None</code>:</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">dele.last.next = dele.next</code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">insert</code>(</code><code class="color1">self, prev_node, new_data</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code> self.head <code class="keyword">is None</code>:</code></div>
+    <div class="line number1 index0 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code> <code class="plain"><code class="functions"> print</code>(<code class="comments">"This node doesn't exist in DLL"</code>)</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return</code> -1</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">new_node = Node(new_data)</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">new_node.next = prev_node.next</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">prev_node.next = prev_node</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">new_node.prev = prev_node</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code> self.head <code class="keyword">is None</code>:</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">new_node.next.prev = new_node</code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">append</code>(</code><code class="color1">self, new_data</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">new_node = Node(data = new_data</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">last = self.head</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">new_node.next = None</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code> self.head<code class="keyword">is None</code>:</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">nlast = lst.next</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">last.next = new_node</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">new_node.prev = last</code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">Listprint</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">printval = self.head</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">while </code>(printval):</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="functions">print</code>(printval.data)</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">printval = printval.next</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code>(printval.data == self.head.data):</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">break</code></code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">pop</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">last = self.head</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">while </code>(last.next):</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">last = self.next</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">temp = last.data</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">last.last.next=self.head</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.deleteNode(last)</code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return</code>(temp)</code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number1 index0 alt2"><code class="comments"># Code to test the above functions</code></div>
+    <div class="line number1 index0 alt2"><code class="plain">llist = DLinkedList()</code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    <div class="line number1 index0 alt2"><code class="plain">e1 = Node(<code class="comments">"mon"</code>)</code></div>
+    <div class="line number1 index0 alt2"><code class="plain">e2 = Node(<code class="comments">"tues"</code>)</code></div>
+    <div class="line number1 index0 alt2"><code class="plain">e3 = Node(<code class="comments">"wed"</code>)</code></div>
+    <div class="line number1 index0 alt2"><code class="plain">e4 = Node(<code class="comments">"thur"</code>)</code></div>
+    <div class="line number1 index0 alt2"><code class="plain">e5 = Node(<code class="comments">"fri"</code>)</code></div>
+    <div class="line number1 index0 alt2"><code class="plain">e6 = Node(<code class="comments">"bad day"</code>)</code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    <div class="line number1 index0 alt2"><code class="plain">llist.<code class="methods">add</code>(e2)</code></div>
+    <div class="line number1 index0 alt2"><code class="plain">llist.<code class="methods">add</code>(e1)</code></div>
+    <div class="line number1 index0 alt2"><code class="plain">llist.<code class="methods">append</code>(e4)</code></div>
+    <div class="line number1 index0 alt2"><code class="plain">llist.<code class="methods">insert</code>(llist.head.next,e3)</code></div>
+    <div class="line number1 index0 alt2"><code class="plain">llist.<code class="methods">add</code>(e5)</code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    <div class="line number1 index0 alt2"><code class="plain">llist.<code class="methods">insert</code>(llist.head.next.next.e6)</code></div>
+    <div class="line number1 index0 alt2"><code class="plain"><code class="functions">print</code>(llist.<code class="methods">pop</code>(), <code class="comments">"was be deleted</code>))</code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    <div class="line number1 index0 alt2"><code class="plain">llist.<code class="methods">Listprint()</code></code></div>
+    
+    
+    
+    
+</div></td></tr></tbody></table></div></div>
+<br><p>Output:</p>
+        <div class= "code-container">
+<div id="highlighter_780875" class="syntaxhighlighter nogutter  ">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+    <div class="line number1 index0 alt2"> <code class="plain">bad day should be deleted</code></div>
+    <div class="line number1 index0 alt2"> <code class="plain">["mon","tues","wed","thur","fri"]</code></div>
+</div></td></tr></tbody></table></div></div>
 </div>
