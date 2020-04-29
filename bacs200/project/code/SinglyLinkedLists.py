@@ -33,12 +33,10 @@ class SLinkedList:
         HeadVal = None
 
     def search(self, searchKey): 
-         
         current = self.head 
-        # loop till current not equal to None 
         while current != None: 
             if current.data == searchKey: 
-                return True # data found
+                return True 
             current = current.next
         return False
 
@@ -68,10 +66,9 @@ class SLinkedList:
     def index(self, searchKey):
         current = self.head
         counter = 0
-        # loop till current not equal to None 
         while current != None:
             if current.data == searchKey: 
-                return counter # data found
+                return counter 
             counter += 1
             current = current.next
         return -1
@@ -98,7 +95,7 @@ class SLinkedList:
         self.RemoveNode(last.data)
         return temp
 
-"""     Testing the functions above
+#Testing the functions above
 llist = SLinkedList()
 
 e1 = Node("Mon")
@@ -114,4 +111,4 @@ llist.append(e5)
 
 llist.insert(llist.head.next.next, e4)
 
-llist.Listprint()"""
+llist.Listprint()
