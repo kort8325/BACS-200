@@ -34,7 +34,7 @@ class Stack:
             counter = counter + 1
         return(counter)
 
-""" Tests the above functions
+#Tests the above functions
 newStack = Stack()
 print(newStack.isEmpty())
 newStack.push('a')
@@ -45,4 +45,4 @@ print(newStack.peek())
 newStack.pop()
 print(newStack.stack)
 print(newStack.isEmpty())
-print(newStack.size())"""
+print(newStack.size())

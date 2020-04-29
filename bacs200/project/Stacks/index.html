@@ -17,6 +17,81 @@
 </h1>
 <br>
 
-<p>This page will show off the code found in this file.  Check it out if you want to see work on Stacks</p>
+<p>Below is code demonstrating python code of a stack being executed. The 'tricks' for this week are included in making the python code</p>
     <a href="../code/Stack.py">Stack.py</a>
+    <div class= "code-container">
+<div id="highlighter_780875" class="syntaxhighlighter nogutter  ">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+    <div class="line number1 index0 alt1"><code class="keyword">class</code> <code class="plain">Stack: </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">__init__</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.stack = [] </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.top = <code class="keyword">None</code></code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">push</code>(</code><code class="color1">self, data</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.stack.append(data) </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.top = data </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">pop</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">temp1 = self.stack.pop() </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">temp = <code class="comments">""</code> </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">for</code> i <code class="keyword">in</code> self.stack: </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code>(i == temp1): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">break</code> </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">temp = i </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">self.top = temp </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return</code>(temp1)</code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">peek</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return</code>(self.top)</code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">isEmpty</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">if</code>(self.top <code class="keyword">is None</code>): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return True</code> </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return False</code> </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">def</code> <code class="plain"><code class="methods">size</code>(</code><code class="color1">self</code><code class="plain">): </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">counter = 0 </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">for</code> i <code class="keyword">in</code> self.stack: </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">counter = counter + 1 </code></div>
+    <div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain"><code class="keyword">return</code>(counter) </code></div>
+    <div class="line number12 index11 alt1"><code class="undefined spaces">&nbsp;</code>&nbsp;</div>
+    
+    <div class="line number5 index4 alt2"><code class="comments"># test stack functions above</code></div>
+    <div class="line number5 index4 alt2"><code class="plain">newStack = Stack()</code></div>
+    <div class="line number5 index4 alt2"><code class="plain"><code class="functions">print</code>(newStack.<code class="methods">isEmpty</code>())</code></div>
+    <div class="line number5 index4 alt2"><code class="plain">newStack.<code class="methods">push</code>(<code class="comments">'a'</code>)</code></div>
+    <div class="line number5 index4 alt2"><code class="plain">newStack.<code class="methods">push</code>(<code class="comments">'b'</code>)</code></div>
+    <div class="line number5 index4 alt2"><code class="plain">newStack.<code class="methods">push</code>(<code class="comments">'c'</code>)</code></div>
+    <div class="line number5 index4 alt2"><code class="plain">newStack.<code class="methods">push</code>(<code class="comments">'d'</code>)</code></div>
+    <div class="line number5 index4 alt2"><code class="plain"><code class="functions">print</code>(newStack.<code class="methods">peek</code>())</code></div>
+    <div class="line number5 index4 alt2"><code class="plain">newStack.<code class="methods">pop</code>()</code></div>
+    <div class="line number5 index4 alt2"><code class="plain"><code class="functions">print</code>(newStack.<code class="methods">stack</code>())</code></div>
+    <div class="line number5 index4 alt2"><code class="plain"><code class="functions">print</code>(newStack.<code class="methods">isEmpty</code>())</code></div>
+    <div class="line number5 index4 alt2"><code class="plain"><code class="functions">print</code>(newStack.<code class="methods">size</code>())</code></div>
+    
+    
+    </div></td></tr></tbody></table></div></div>
+<br><p>Output:</p>
+    <div class= "code-container">
+<div id="highlighter_780875" class="syntaxhighlighter nogutter  ">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+    <div class="line number1 index0 alt2"> <code class="plain">True</code></div>
+    <div class="line number1 index0 alt2"> <code class="plain">d</code></div>
+    <div class="line number1 index0 alt2"> <code class="plain">['a', 'b', 'c']</code></div>
+    <div class="line number1 index0 alt2"> <code class="plain">False</code></div>
+    <div class="line number1 index0 alt2"> <code class="plain">3</code></div>
+</div></td></tr></tbody></table></div></div>
 </div>
