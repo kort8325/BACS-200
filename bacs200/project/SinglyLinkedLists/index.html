@@ -13,13 +13,22 @@
 <h1>Python Run Times
 <br><br>
 Yusuf Kortobi<br>
-   4/30/2020<br>
+   5/1/2020<br>
    Bacs-495
     </h1><br>
 <br>
 
-    <p>Below is code demonstrating python code of singly linked lists being executed. The 'tricks' for this week are included in making the python code</p>
-    <a href="../code/SinglyLinkedLists.py">SinglyLinkedLists.py</a>
+    <h2>Singly Linked Lists</h2>
+    <p>Linked lists are a series of nodes that link between eachother as a method of traversing the list, and singly linked lists are specifically only linked in one direction.  A node is constructed and will contain a data variable, and will be linked to the next node.  The nodes theoretically will start at a first node and will link together until they will hit an ending node, and the end node will be linked up to the first node a gain, making the linked list a loop for searching through.  The advantages of using a linked list for storing values are that the lists are traversable and are more easily accessable than the default array usually is in python, and the nodes are a general data type of none allowing the list to be multivariable.  </p>
+    <h2>Methods</h2>
+    <table border="2" cellpadding="2">
+        <tr><td>Methods</td><td>Add(data_in)</td><td>RemoveNode(removeKey)</td><td>search(searchKey)</td><td>isEmpty()</td><td>size()</td><td>append(newdata)</td><td>index(searchKey)</td><td>insert(pos,newdata)</td><td>pop()</td></tr>
+        <tr><td>Big-O running time</td><td>O(1)</td><td>O(n)</td><td>O(n)</td><td>O(1)</td><td>O(n)</td><td>O(n)</td><td>O(n)</td><td>O(1)</td><td>O(n)</td></tr>
+        <tr><td>Description</td><td>Add an element <br>to the begining <br>of the list</td><td>Remove a specific node<br>from this list</td><td>search for a specific<br>node in the list</td><td>Check if the<br>list is empty</td><td>Find the size<br>of the list</td><td>Add an element<br>to the end of the <br>list</td><td>find the index of<br>a specific node<br> in the list</td><td>insert a node into <br>the list at a specif<br>position</td><td>removes and returns<br> the last element of <br>the list</td></tr>
+    </table>
+    
+    <br><br>
+    <p>Below is the code implementation of the methods above:</p>
     
     <div class= "code-container">
 <div id="highlighter_780875" class="syntaxhighlighter nogutter  ">
@@ -168,4 +177,8 @@ Yusuf Kortobi<br>
     <div class="line number1 index0 alt2"> <code class="plain">Thur</code></div>
     <div class="line number1 index0 alt2"> <code class="plain">Fri</code></div>
 </div></td></tr></tbody></table></div></div>
+    
+<p>follow the links below to learn more about Singly linked lists, or click <a href="../code/SinglyLinkedLists.py">here</a> to download the above file</p>
+<a href="https://www.geeksforgeeks.org/data-structures/linked-list/">GeeksforGeeks Linked lists</a>
+<a href="https://www.w3schools.in/data-structures-tutorial/linked-list/">w3Schools Linked Lists</a>
 </div>
